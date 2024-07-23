@@ -1,3 +1,4 @@
+import './LogoStyles.css'
 import {
   Box,
   Button,
@@ -63,13 +64,14 @@ export const DashboardNavigation: React.FC<DashboardNavigationProps> = ({
   
 
   
-  const [menuOpen, isMenuOpen] = React.useState<boolean>(false)
+  const [menuOpen, isMenuOpen] = React.useState<boolean>(true)
 
   const [folderConfiguration, setFolderConfiguration] = useState<Folder[]>(configurationData.folders)
   const [activeFolder, setActiveFolder] = useState<string>("");
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  console.log("menuOpen",menuOpen);
 
   //const [folders,setFolders] = useState<Folder[]>()
 
@@ -168,20 +170,10 @@ export const DashboardNavigation: React.FC<DashboardNavigationProps> = ({
     </Backdrop>
           <Space className="collapse-button-container dashboard-nav-item">
             <div className={menuOpen?'logo collapse':'logo'} onClick={sendToLanding}>
-              <Logo />
+            <h4>HITS<sup>TM</sup></h4>
             </div>      
             <Button className="custom-button collapse-button"  onClick={() => handleCollapse()}>
-            {(() => {
-              if (menuOpen){
-                return(
-                  <Menu />
-                ) 
-              } else {
-                return(
-                  <Menu />
-                )
-              }
-            })()} 
+            <Menu />
             </Button>
           </Space>  
         {folderConfiguration != undefined && 

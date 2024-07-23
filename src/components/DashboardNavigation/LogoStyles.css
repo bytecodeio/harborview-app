@@ -1,0 +1,38 @@
+.site-branding:after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 14px solid #1A1818;
+    border-right: 148px solid transparent;
+    z-index:2;
+}
+.site-branding:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 148px;
+    width: 0;
+    height: 0;
+    border-top: 40px solid #1A1818;
+    border-right: 20px solid transparent;
+}
+
+.site-branding {
+    display: block;
+    width: 148px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: #1A1818;
+}
+
+svg#hv-logo path.strokes {
+    fill: #D3B9BC;
+}
+svg#hv-logo path.text {
+    fill: #FFFFFF;
+}

@@ -7,7 +7,7 @@
     "clean": "rm -rf dist",
     "start": "webpack serve --hot --disable-host-check --port 8080",
     "start-no-hot": "webpack serve --no-inline --no-hot --port 8080",
-    "build": "set BABEL_ENV=build  && webpack --mode=production --config webpack.prod.config.js",
+    "build": "set BABEL_ENV=build && set NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=production --config webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-data-server": "cp db.json temp_db.json && nodemon server/index.js"
   },
@@ -79,9 +79,9 @@
     "ttypescript": "^1.5.10",
     "typescript": "3.8.2",
     "typescript-plugin-styled-components": "^1.4.4",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack": "5.93.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.0.4"
   },
   "babel": {
     "presets": [
